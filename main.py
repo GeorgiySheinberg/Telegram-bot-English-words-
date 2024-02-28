@@ -143,7 +143,7 @@ print('Start telegram bot...')
 
 bot_first_start()
 state_storage = StateMemoryStorage()
-token_bot = '6850932575:AAFIrBgOUeov8ROA3CESWLRPB0klWQccWIo'
+token_bot = ''
 bot = TeleBot(token_bot, state_storage=state_storage)
 
 known_users = []
