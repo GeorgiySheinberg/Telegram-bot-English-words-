@@ -126,7 +126,7 @@ def delete_word(message):
 @bot.message_handler(func=lambda message: message.text == Command.ADD_WORD)
 def add_word(message):
     bot.send_message(message.from_user.id,
-                     "Введи новое слово в формате'Новое слово: {ENG}-{RU}'"
+                     "Введи новое слово в формате 'Новое слово: {ENG}-{RU}'"
                      )
 
 
@@ -138,8 +138,6 @@ def message_reply(message):
         target_word = data['target_word']
         if text.split(":")[0] == "Новое слово":
             new_word = text.split(":")[1]
-            print(new_word.split("-")[0].strip())
-            print(type(new_word.split("-")[0].strip()))
             add_new_word(message.chat.id, new_word.split("-")[0].strip(), new_word.split("-")[1].strip())
             bot.send_message(message.from_user.id, f'Слово \"{new_word.split("-")[0].strip()}\" '
                                                    f'успешно добавлено в БД')
